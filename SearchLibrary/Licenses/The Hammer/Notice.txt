@@ -1,0 +1,13 @@
+﻿Timothy James
+Copyright 2011 Timothy James
+
+This product includes software developed by:
+	
+	Timothy James
+		- The Lucene.NET wrapping API, code named 'The Hammer'
+
+	The Apache Software Foundation (http://www.apache.org/).
+		- The Lucene.NET Library
+
+	Martin Porter and Richard Boulton
+		- The snowball stemmers in contrib/Snoball.Net/SF/Snowball

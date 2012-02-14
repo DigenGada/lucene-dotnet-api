@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EFD29EE5-8091-4550-81FA-80228F51F1E0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IndexLibrary</RootNamespace>
+    <AssemblyName>IndexLibrary</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;CODE_ANALYSIS;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\IndexLibrary.xml</DocumentationFile>
+    <CodeAnalysisRuleSet>AppliedRuleSet.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>ThirdParty\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Lucene29.Net, Version=2.9.2.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ThirdParty\Lucene29.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Compression\CompressionManager.cs" />
+    <Compile Include="Compression\CompressionType.cs" />
+    <Compile Include="IndexLibrary\Abstract Classes\SearcherEventArgsAbstract.cs" />
+    <Compile Include="IndexLibrary\Interfaces\IIndex.cs" />
+    <Compile Include="SqlParser\Abstract Classes\SqlQuery.cs" />
+    <Compile Include="IndexLibrary\Attributes\IndexableAttribute.cs" />
+    <Compile Include="IndexLibrary\Attributes\IndexOptionsAttribute.cs" />
+    <Compile Include="IndexLibrary\Reflection\ClassDefinitionData.cs" />
+    <Compile Include="IndexLibrary\Enums\CodecEnum.cs" />
+    <Compile Include="IndexLibrary\Enums\HashType.cs" />
+    <Compile Include="SqlParser\Enums\QueryType.cs" />
+    <Compile Include="SqlParser\Enums\Top.cs" />
+    <Compile Include="SqlParser\Enums\WhereExpressionOperator.cs" />
+    <Compile Include="Extensions\IEnumSearchResultsExtensions.cs" />
+    <Compile Include="IndexLibrary\Reflection\IndexWriter ReflectionExtensions.cs" />
+    <Compile Include="Analysis\Interfaces\IAnalysisWriter.cs" />
+    <Compile Include="IndexLibrary\Interfaces\ICyclicalIndex.cs" />
+    <Compile Include="IndexLibrary\Interfaces\IDoubleIndex.cs" />
+    <Compile Include="Phonetics\Algorithms.cs" />
+    <Compile Include="Phonetics\EditDistance.cs" />
+    <Compile Include="IndexLibrary\Public Classes\CyclicalIndex.cs" />
+    <Compile Include="SqlParser\Public Classes\DeleteQuery.cs" />
+    <Compile Include="IndexLibrary\Public Classes\DoubleIndex.cs" />
+    <Compile Include="SqlParser\Public Classes\InsertQuery.cs" />
+    <Compile Include="SqlParser\Public Classes\QualifiedFieldName.cs" />
+    <Compile Include="SqlParser\Public Classes\SelectQuery.cs" />
+    <Compile Include="IndexLibrary\Public Classes\SingleIndex.cs" />
+    <Compile Include="IndexLibrary\Public Classes\IndexDocument.cs" />
+    <Compile Include="IndexLibrary\Public Classes\FieldStorage.cs" />
+    <Compile Include="IndexLibrary\Public Classes\IndexInfo.cs" />
+    <Compile Include="IndexLibrary\Public Classes\IndexWriter.cs" />
+    <Compile Include="IndexLibrary\Public Classes\IndexWriterRule.cs" />
+    <Compile Include="IndexLibrary\Public Classes\IndexWritingRuleCollection.cs" />
+    <Compile Include="IndexLibrary\EventArgs\ReaderEventArgs.cs" />
+    <Compile Include="IndexLibrary\Public Classes\ReaderInfo.cs" />
+    <Compile Include="IndexLibrary\Public Classes\SearchInfo.cs" />
+    <Compile Include="IndexLibrary\Public Classes\SearchTerm.cs" />
+    <Compile Include="IndexLibrary\EventArgs\MultiSearchEventArgs.cs" />
+    <Compile Include="IndexLibrary\EventArgs\SearcherEventArgs.cs" />
+    <Compile Include="IndexLibrary\Enums\AnalyzerType.cs" />
+    <Compile Include="IndexLibrary\Enums\ClauseOccurrence.cs" />
+    <Compile Include="IndexLibrary\Attributes\ExperimentalAttribute.cs" />
+    <Compile Include="IndexLibrary\Enums\DirectoryType.cs" />
+    <Compile Include="IndexLibrary\Enums\FieldIndex.cs" />
+    <Compile Include="IndexLibrary\Enums\FieldOption.cs" />
+    <Compile Include="IndexLibrary\Enums\FieldTermVector.cs" />
+    <Compile Include="IndexLibrary\Enums\IndexStructure.cs" />
+    <Compile Include="IndexLibrary\Enums\SearchMethodLocation.cs" />
+    <Compile Include="IndexLibrary\Enums\SearchMethodType.cs" />
+    <Compile Include="IndexLibrary\Interfaces\IIndexSearcher.cs" />
+    <Compile Include="IndexLibrary\Public Classes\IndexDirectory.cs" />
+    <Compile Include="IndexLibrary\Public Classes\IndexHelper.cs" />
+    <Compile Include="IndexLibrary\Public Classes\IndexReader.cs" />
+    <Compile Include="IndexLibrary\Public Classes\IndexSearcher.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="IndexLibrary\Abstract Classes\FieldAbstract.cs" />
+    <Compile Include="IndexLibrary\Public Classes\MultiIndexSearcher.cs" />
+    <Compile Include="IndexLibrary\Public Classes\QueryBuilder.cs" />
+    <Compile Include="IndexLibrary\Public Classes\SearchResultFilter.cs" />
+    <Compile Include="IndexLibrary\EventArgs\WriterEventArgs.cs" />
+    <Compile Include="SqlParser\Public Classes\UpdateQuery.cs" />
+    <Compile Include="SqlParser\Public Classes\WhereExpression.cs" />
+    <Compile Include="Analysis\LibraryAnalysis.cs" />
+    <Compile Include="IndexLibrary\Public Classes\SearchResult.cs" />
+    <Compile Include="IndexLibrary\Public Classes\SearchResultDataSet.cs" />
+    <Compile Include="IndexLibrary\Public Classes\FieldNormal.cs" />
+    <Compile Include="IndexLibrary\Static Classes\SearchStringFormatter.cs" />
+    <Compile Include="IndexLibrary\Static Classes\StaticValues.cs" />
+    <Compile Include="IndexLibrary\Static Classes\TypeConverter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Licenses\Lucene\DISCLAIMER.txt" />
+    <Content Include="Licenses\Lucene\LICENSE.txt" />
+    <Content Include="Licenses\Lucene\NOTICE.txt" />
+    <Content Include="Licenses\Lucene\README.txt" />
+    <Content Include="Licenses\The Hammer\License.txt" />
+    <Content Include="Licenses\The Hammer\Notice.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
